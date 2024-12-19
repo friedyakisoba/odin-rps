@@ -13,30 +13,29 @@ function getComputerChoice(min, max) {
 
 
 function getHumanChoice() {
-    let userChoice = prompt("Rock Paper Scissors!").toLowerCase();
-    if (userChoice == "rock") {
-        return userChoice;
-    } else if (userChoice == "paper") {
-        return userChoice;
-    } else if (userChoice == "scissors") {
-        return userChoice;
-    } else {
-        alert("Invalid choice...Exiting");
-        return null;
+    while (true) {
+        let userChoice = prompt("Rock Paper Scissors!").toLowerCase();
+        if (userChoice === "rock" ||
+            userChoice === "paper" ||
+            userChoice === "scissors") {
+            return userChoice;
+        }
+        alert("Invalid Input. Enter Rock Paper or Scissors.");
     }
+
 }
 
 
 function playRound(humanChoice, computerChoice) {
-    if ((humanChoice == "rock" && computerChoice == "scissors") ||
-        (humanChoice == "paper" && computerChoice == "rock") ||
-        (humanChoice == "scissors" && computerChoice == "paper")) {
+    if ((humanChoice === "rock" && computerChoice === "scissors") ||
+        (humanChoice === "paper" && computerChoice === "rock") ||
+        (humanChoice === "scissors" && computerChoice === "paper")) {
         return "Human Win";
     }
 
-    if ((computerChoice == "rock" && humanChoice == "scissors") ||
-        (computerChoice == "paper" && humanChoice == "rock") ||
-        (computerChoice == "scissors" && humanChoice == "paper")) {
+    if ((computerChoice === "rock" && humanChoice === "scissors") ||
+        (computerChoice === "paper" && humanChoice === "rock") ||
+        (computerChoice === "scissors" && humanChoice === "paper")) {
         return "Computer Win";
     }
 
