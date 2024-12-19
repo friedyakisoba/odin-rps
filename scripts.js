@@ -2,13 +2,11 @@
 
 function getComputerChoice(min, max) {
     const ranInt = Math.floor(Math.random() * (max - min + 1)) + min;
-    if (ranInt == 1) {
-        return "paper";
-    } else if (ranInt == 2) {
-        return "scissors";
-    } else if (ranInt == 3) {
-        return "rock";
-    }
+    if (ranInt == 1) return "paper";
+    if (ranInt == 2) return "scissors";
+    // default case when const ranInt = 3 
+    return "rock";
+    
 }
 
 
