@@ -64,21 +64,21 @@ function playGame() {
             alert(`It's a tie for Round ${round}! // The score is You: ${humanScore} Computer: ${computerScore}`);
 
         }
-        
-        // tracks the points and what the choices are to debug
+        // DEBUGGER tracks the points and what the choices are 
         // console.log("You chose", humanChoice);
         // console.log("Computer chose", computerChoice);
-
         // console.log("Your points", humanScore);
         // console.log("Computer points", computerScore);
     }
 
     if (humanScore > computerScore) {
-        alert("Human has won the game");
-
+        alert(`You: ${humanScore} // Computer: ${computerScore}`);
+        alert ("You Won!");
     } else if (computerScore > humanScore) {
-        alert("Computer has won the game");
+        alert(`You: ${humanScore} // Computer: ${computerScore}`);
+        alert ("Computer Won!");
     } else if (computerScore == humanScore) {
+        alert(`You: ${humanScore} // Computer: ${computerScore}`);
         alert("It's a Tie!")
     }
 
